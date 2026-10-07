@@ -1,0 +1,20 @@
+git init
+
+git add index.html
+git commit -m "Add page structure"
+
+git add style.css
+git commit -m "Style layout and note cards"
+
+git add script.js
+git commit -m "Add notes with categories"
+
+# If you want separate meaningful commits, you can commit script.js changes in stages
+# using git add -p, or make additional small edits for validation/delete/search/storage.
+
+git add README.md
+git commit -m "Document project in README"
+
+git branch -M main
+git remote add origin https://github.com/your-username/quicknotes-app.git
+git push -u origin main

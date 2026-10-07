@@ -4,43 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuickNotes</title>
-
-  <!-- Shared CSS -->
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-
   <header>
     <h1>QuickNotes</h1>
-    <p>Capture ideas before they disappear.</p>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
+    <p>Capture your thoughts quickly and neatly.</p>
   </header>
 
   <main>
-    <section>
-      <h2>QuickNotes</h2>
+    <section aria-labelledby="add-note-heading">
+      <h2 id="add-note-heading">Add a note</h2>
 
-      <p>
-        Write down your ideas and reminders quickly with QuickNotes.
-      </p>
+      <form id="note-form">
+        <div class="form-group">
+          <label for="note-input">Note</label>
+          <input
+            id="note-input"
+            name="note"
+            type="text"
+            placeholder="Write a note..."
+            autocomplete="off"
+          >
+        </div>
 
-      <form>
-        <label for="note">New note</label>
-        <input type="text" id="note" name="note" placeholder="Write your note here">
+        <div class="form-group">
+          <label for="note-category">Category</label>
+          <select id="note-category" name="category">
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+          </select>
+        </div>
 
         <button type="submit">Add Note</button>
       </form>
+
+      <p id="error-message" class="error" role="alert" aria-live="polite"></p>
+    </section>
+
+    <section aria-labelledby="notes-heading">
+      <h2 id="notes-heading">Your notes</h2>
+
+      <div class="search-group">
+        <label for="search-input">Search notes</label>
+        <input id="search-input" type="search" placeholder="Search notes...">
+      </div>
+
+      <p id="note-count"></p>
+      <ul id="notes-list"></ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 QuickNotes. Built during Web Foundations.</p>
+    <p>&copy; 2026 QuickNotes. Built for learning.</p>
   </footer>
-
 </body>
 </html>

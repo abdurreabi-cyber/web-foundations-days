@@ -1,0 +1,111 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --card-color: #f5f5f5;
+    --border-color: #cccccc;
+    --button-bg: #222222;
+    --button-text: #ffffff;
+    --warning-color: #e67e22;
+    --over-color: #d32f2f;
+}
+
+body.dark {
+    --bg-color: #181818;
+    --text-color: #f1f1f1;
+    --card-color: #252525;
+    --border-color: #555555;
+    --button-bg: #f1f1f1;
+    --button-text: #181818;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    min-height: 220px;
+    padding: 14px;
+    resize: vertical;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font: inherit;
+}
+
+textarea:focus {
+    outline: 2px solid var(--button-bg);
+    outline-offset: 2px;
+}
+
+.counters {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.counters p {
+    margin: 12px 0;
+}
+
+.warning {
+    color: var(--warning-color);
+}
+
+.over {
+    color: var(--over-color);
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    font: inherit;
+}
+
+button:hover {
+    opacity: 0.85;
+}
