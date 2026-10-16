@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickNotes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="api.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">QUICKNOTES</p>
+      <h1>Your notes, organized.</h1>
+      <p class="intro">A small API-client demo for loading, creating, and deleting notes.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="create-heading">
+      <h2 id="create-heading">Create a note</h2>
+      <form id="note-form" novalidate>
+        <label for="title-input">Title <span aria-hidden="true">*</span></label>
+        <input id="title-input" name="title" type="text" maxlength="100" required
+               placeholder="e.g. Meeting notes" aria-describedby="title-help">
+        <small id="title-help">Required, maximum 100 characters.</small>
+        <label for="body-input">Body (optional)</label>
+        <textarea id="body-input" name="body" rows="4" placeholder="Write your note..."></textarea>
+        <button id="submit-btn" type="submit">Create note</button>
+      </form>
+    </section>
+
+    <section class="notes-section" aria-labelledby="notes-heading">
+      <div class="section-heading">
+        <div><h2 id="notes-heading">Your notes</h2><p>Practice API: JSONPlaceholder</p></div>
+        <button id="load-btn" class="button-secondary" type="button">Load notes</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">Ready. Select “Load notes” to begin.</p>
+      <ul id="notes-list" aria-label="Notes list"></ul>
+    </section>
+    <footer>QuickNotes System Design · Learning project</footer>
+  </main>
+</body>
+</html>
