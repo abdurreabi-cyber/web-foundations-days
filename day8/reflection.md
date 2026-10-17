@@ -1,0 +1,7 @@
+# Day 8 Reflection
+
+The most difficult concept in the course was understanding how system design decisions work together when many users access the same application at once. It was not enough to think only about the pages and features. I also had to consider traffic estimates, database relationships, API behavior, performance, and what happens when requests fail or are repeated. I worked through this by breaking the problem into the six design parts, writing down the assumptions, and checking how each component supports the requirements. Designing seat holds also helped me understand why a database transaction and constraints are necessary to prevent two people from buying the same seat.
+
+Based on the feedback I received on my capstone, I would improve the parts that need clearer explanations and stronger testing. I would make the design easier for another developer to understand, document important decisions, and test the main user flows with realistic data. I would also improve error handling so users receive clear messages when an action fails instead of being left unsure about what happened.
+
+Next, I want to learn more about backend development, database transactions, API security, and cloud deployment. I plan to practise building a small application with a relational database and REST APIs, then deploy it and monitor how it performs. I also want to learn automated testing and load testing so I can check both correctness and performance before users depend on a system.
